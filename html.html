@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success!</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% if data == 'egg' %}
+<script>
+window.location.replace("https://media.tenor.com/aO2Bqvk3wgsAAAAd/cat-throwing-egg-viralhog.gif");
+</script>
+  
+{% elif data == 'feelings' %}
+<script>
+window.location.replace("https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fsad-cartoon-cat-gifs&psig=AOvVaw0MXZRVaaaHCRMYYGRc0eNa&ust=1679577919655000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKCsvrzR7_0CFQAAAAAdAAAAABAD");
+</script>
+
+{% elif data == 'next' %}
+<script>
+window.location.replace("https://gifdb.com/images/high/happy-cat-peach-cute-head-bobbing-ez8elbaenirl2hqc.gif");
+</script>
+{% endif %}
+	<h1>Thank you for your time, {{ name }}!</h1>
+  
+</body>
+</html>
