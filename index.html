@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Suggestion form</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<h1>Tell us your thoughts</h1>
+  <h5>feel free to type whatever you like</h5>
+	<form method="POST" action="{{ url_for('submit') }}">
+    <p>
+		  <label for="name">Full name:</label>
+		  <input type="text" id="name" name="name" required>
+    </p>
+    <p>
+		  <label for="class">Class:</label>
+		  <input type="text" id="class" name="class" required>
+    </p>
+    <p>
+		  <label for="email">Email:</label>
+		  <input type="email" id="email" name="email" required>
+    </p>
+    <p>
+      <label for="place">Concern about:</label>
+		  <select id="place" name="place" required>
+			<option value="">Please select</option>
+		  <option value="facilities">school facilities</option>
+	    <option value="programs">school programs</option>
+	   	<option value="classes">classes</option>
+		  <option value="teachers">teachers</option>
+      <option value="others">others</option>
+		  </select>
+    </p>
+    <p>
+      <label for="area">Area of concern:</label>
+		  <select id="area" name="area" required>
+			<option value="">Please select</option>
+			<option value="problem">Problem</option>
+			<option value="suggestion">Suggestion</option>
+			<option value="others">others</option>
+		</select>
+    </p>
+    <p>
+		  <label for="feedback">Please elaborate.</label>
+		  <textarea id="feedback" name="feedback" required></textarea>
+    </p>
+    <p>
+      <label for="rating">How would you rate your experience?</label>
+        <input type="radio" id="Very bad" name="rating" value="Very bad">
+        <label for="Very bad" style="font-weight:normal;">Very bad</label>
+        <input type="radio" id="Bad" name="rating" value="Bad">
+        <label for="Bad" style="font-weight:normal;">Bad</label>
+        <input type="radio" id="Neutral" name="rating" value="Neutral" checked>
+        <label for="Neutral" style="font-weight:Neutral;">Neutral</label>
+        <input type="radio" id="Good" name="rating" value="Good">
+        <label for="Good" style="font-weight:normal;">Good</label>
+        <input type="radio" id="Very good" name="rating" value="Very good">
+        <label for="Very good" style="font-weight:normal;">Very good</label>
+    </p>
+    <p>
+		<label for="feedback">Is there anything else?</label>
+		<textarea id="feedback" name="feedback" required></textarea>
+    </p>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
